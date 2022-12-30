@@ -36,8 +36,8 @@ echo 3 >/proc/sys/vm/drop_caches
 
 
 # realconfig
-SCRIPTPATH="$(dirname "$0")"
-REALCONFIG="$SCRIPTPATH/config.sh"
+#SCRIPTPATH="$(dirname "$0")"
+REALCONFIG="config.sh"
 
 FOLD="$(mktemp -d /installimage.XXXXX)"
 
