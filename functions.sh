@@ -1654,7 +1654,7 @@ whoami() {
 
  IMG_VERSION="$(echo "$1" | cut -d "-" -f 2)"
  
- [ -z "$IMG_VERSION" -o "$IMG_VERSION" = "" -o "$IMG_VERSION" = *"tar"* -o "$IMG_VERSION" = 'latest' ] && IMG_VERSION="0"
+ [ -z "$IMG_VERSION" -o "$IMG_VERSION" = "" -o "$IMG_VERSION" = *"tar"* -o "$IMG_VERSION" = 'latest' ] && IMG_VERSION=0
  IMG_ARCH="$(echo "$1" | sed 's/.*-\(32\|64\)-.*/\1/')"
 
  IMG_FULLNAME="$(find "$IMAGESPATH" -maxdepth 1 -type f -name "$1*" -a -not -regex '.*\.sig$' -printf '%f\n')"
