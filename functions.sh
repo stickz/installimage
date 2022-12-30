@@ -1653,7 +1653,7 @@ whoami() {
  fi
 
  IMG_VERSION="$(echo "$1" | cut -d "-" -f 2)"
- if [ "$IMG_VERSION" == *"tar"* ] || [ "$IMG_VERSION" == "" ] || [ "$IMG_VERSION" = "latest" ]; then
+ if [[ 	("$IMG_VERSION" == *"tar"*) || ("$IMG_VERSION" == "") || ("$IMG_VERSION" = "latest") ]]; then
    IMG_VERSION=0
  fi
  
