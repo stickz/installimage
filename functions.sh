@@ -1653,8 +1653,9 @@ whoami() {
  fi
 
  IMG_VERSION="$(echo "$1" | cut -d "-" -f 2)"
- [ -z "$IMG_VERSION" == *"tar"* ] && IMG_VERSION=0 
- [ -z "$IMG_VERSION" -o "$IMG_VERSION" = "" -o "$IMG_VERSION" = 'latest' ] && IMG_VERSION=0
+ if [[ 	("$IMG_VERSION" == *"tar"*) || ("$IMG_VERSION" == "") || ("$IMG_VERSION" = "latest") ]]; then
+   IMG_VERSION=0
+ fi
  
  IMG_ARCH="$(echo "$1" | sed 's/.*-\(32\|64\)-.*/\1/')"
 
