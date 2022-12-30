@@ -3442,7 +3442,7 @@ generate_ntp_config() {
   local ubuntu_version=0
   local suse_version=0
   
-  local debfile= "$FOLD/hdd/etc/debian_version"
+  local debfile="$FOLD/hdd/etc/debian_version"
   if [ "$IAM" = 'debian' ] && [ -f debfile ]; then
     debian_version=$(cut -c 1 debfile)
   fi
