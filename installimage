@@ -39,7 +39,7 @@ echo 3 >/proc/sys/vm/drop_caches
 #SCRIPTPATH="$(dirname "$0")"
 REALCONFIG="config.sh"
 
-FOLD="$(mktemp -d /installimage.XXXXX)"
+FOLD="$(mktemp -d /tmp/installimage.XXXXX)"
 
 # copy our config file and read global variables and functions
 cp -a "$REALCONFIG" /tmp/install.vars
