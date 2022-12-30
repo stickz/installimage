@@ -1652,7 +1652,7 @@ whoami() {
   esac
  fi
 
- IMG_VERSION="$(echo "$1" | cut -d "-" -f 2)"
+ IMG_VERSION="$(echo "$1" | cut -d "-" -f 2)" || IMG_VERSION="0"
  [ -z "$IMG_VERSION" -o "$IMG_VERSION" = "" -o "$IMG_VERSION" = "h.net.tar.gz" -o "$IMG_VERSION" = 'latest' ] && IMG_VERSION="0"
  IMG_ARCH="$(echo "$1" | sed 's/.*-\(32\|64\)-.*/\1/')"
 
