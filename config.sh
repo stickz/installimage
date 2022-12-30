@@ -11,7 +11,7 @@ DEBUGFILE=/root/debug.txt
 
 
 # set up standard env
-export SCRIPTPATH; SCRIPTPATH=$(dirname "$0")
+export SCRIPTPATH; SCRIPTPATH="~/installimage"
 export DISABLEDFILE="$SCRIPTPATH/disabled"
 export SETUPFILE="$SCRIPTPATH/setup.sh"
 export AUTOSETUPFILE="$SCRIPTPATH/autosetup.sh"
