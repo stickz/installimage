@@ -2789,7 +2789,7 @@ extract_image() {
     fi
 
     # extract image with given compression
-    if [ "$TAR" = "tar" ] || [ ! -x /usr/bin/bsdtar ]; then
+    if [ "$TAR" = "tar" ] || [ ! -x /usr/bin/bsdtar ] || [ "$2" = "txz" ]; then
       tar "${tar_options[@]}" $COMPRESSION -f "$EXTRACTFROM" -C "$FOLD/hdd/" 2>&1 | debugoutput ; EXITCODE=$?
     else
       bsdtar "${bsdtar_options[@]}" $COMPRESSION -f "$EXTRACTFROM" -C "$FOLD/hdd/" 2>&1 | debugoutput ; EXITCODE=$?
