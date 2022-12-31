@@ -2768,7 +2768,7 @@ extract_image() {
        ;;
       txz)
         tarCOMPRESSION="-I \"xz -T0\" "
-        bsdCOMPRESSION="-J --options='threads=0' "
+        bsdCOMPRESSION="-J --options='xz:threads=0' "
        ;;
       *)return 1;;
     esac
