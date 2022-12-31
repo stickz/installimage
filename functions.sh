@@ -1649,6 +1649,7 @@ whoami() {
     *arch*)IAM="archlinux";;
     *rocky*)IAM="rockylinux";;
     *alma*)IAM="almalinux";;
+    *gentoo*)IAM="gentoo";;
   esac
  fi
 
