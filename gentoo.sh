@@ -161,6 +161,10 @@ run_os_specific_functions() {
   if hetzner_lamp_install; then
     setup_hetzner_lamp || return 1
   fi
+  
+  # Setup mdadm for Gentoo. Add to boot run level. Double array sync speed.
+  execute_chroot_command "rc-update add mdraid boot"
+  execute_chroot_command "echo 400000 > /proc/sys/dev/raid/speed_limit_max"
 
   [[ -e "$FOLD/hdd/var/spool/exim4/input" ]] && find "$FOLD/hdd/var/spool/exim4/input" -type f -delete
 
