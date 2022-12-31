@@ -2767,7 +2767,7 @@ extract_image() {
         bsdCOMPRESSION="-j"
        ;;
       txz)
-        tarCOMPRESSION="-I 'xz -T4' "
+        tarCOMPRESSION="-I 'xz -T 0' "
         bsdCOMPRESSION="-J"
        ;;
       *)return 1;;
