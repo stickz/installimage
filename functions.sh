@@ -2769,7 +2769,7 @@ extract_image() {
         COMPRESSION="-j"
        ;;
       txz)
-        COMPRESSION="-J"
+        COMPRESSION="-I \"xz -T0\""
        ;;
       *)return 1;;
     esac
