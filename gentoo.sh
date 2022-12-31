@@ -165,6 +165,7 @@ run_os_specific_functions() {
   # Setup mdadm for Gentoo. Add to boot run level. Double array sync speed.
   execute_chroot_command "rc-update add mdraid boot"
   execute_chroot_command "echo 400000 > /proc/sys/dev/raid/speed_limit_max"
+  execute_chroot_command "chown root /var/empty"
 
   [[ -e "$FOLD/hdd/var/spool/exim4/input" ]] && find "$FOLD/hdd/var/spool/exim4/input" -type f -delete
 
