@@ -205,6 +205,12 @@ generate_menu() {
   esac
 
   whoami "$IMAGENAME"
+  
+  # reduce boot partition to 512M on gentoo linux
+  # each linux kernel consumes approximately 50M
+  if [ "$IAM" == "gentoo" ]; then
+    DEFAULTPARTS="UEFI##PART swap swap SWAPSIZE##G\nPART /boot ext3 512M\nPART / ext4 all"
+  fi
  fi
 }
 
