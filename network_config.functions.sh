@@ -782,7 +782,7 @@ setup_network_config() {
       setup_etc_sysconfig_network_scripts_centos
     ;;
     suse) setup_etc_sysconfig_network_scripts_suse;;
-    debian) setup_etc_network_interfaces;;
+    debian|gentoo) setup_etc_network_interfaces;;
     ubuntu)
      if ((IMG_VERSION >= 1710)); then
        setup_etc_netplan_01_netcfg_yaml || return 1
